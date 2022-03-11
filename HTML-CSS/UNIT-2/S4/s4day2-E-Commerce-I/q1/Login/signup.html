@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form">
+      <input id="email" type="text" placeholder="enter email" />
+      <input id="user" type="text" placeholder="Enter username" />
+      <input id="pass" type="text" placeholder="Enter password" />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
+
+<!-- <script src="./Script/signup.js" ></script> -->
+
+<script>
+
+    document.querySelector("#form").addEventListener("submit", myForm);
+    var signupArr = JSON.parse(localStorage.getItem("signUpDetails")) || [];
+    console.log(signupArr);
+    
+    function myForm(event) 
+    {
+      event.preventDefault();
+      var signupObj = {
+        email: document.querySelector("#email").value,
+        user: document.querySelector("#user").value,
+        pass: document.querySelector("#pass").value,
+      };
+      
+      signupArr.push(signupObj);
+      
+      localStorage.setItem("signUpDetails", JSON.stringify(signupArr));
+
+      document.querySelector("input[type='submit']").addEventListener("click", function()
+        {
+          window.location.href = "login.html";
+        });
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- // after sigmup, we need to go to the login page, to do that we need to
+    // use window.location.href
+
+    // we need to be redirected to login page when clicked submit on signup package
+    // to get the submit button, we use attribute selector to refer to <input type="submit">,
+    // document.querySelector("input[type='submit']") -->

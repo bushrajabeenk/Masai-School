@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <form id="formTag" >
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <br/>
+        <br/>
+        <label for="age">Age</label>
+        <input type="number" id="age">
+        <br/>
+        <br/>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br/>
+        <br/>
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <br/>
+        <br/>
+        <label for="mobile">Mobile</label>
+        <input type="number" id="mobile">
+        <br/>
+        <br/>
+        <input type="submit">
+    </form>
+
+    <p class="para" ></p>
+    <p class="para"></p>
+    <p class="para"></p>
+    <p class="para"></p>
+    <p class="para"></p>
+</body>
+</html>
+
+<script>
+
+    document.querySelector("#formTag").addEventListener("submit", displayData);
+
+    var students = [];
+
+    function displayData(event)
+    {
+        event.preventDefault();
+        var name = document.querySelector("#name").value;
+        var age = document.querySelector("#age").value;
+        var gender = document.querySelector("#gender").value;
+        var email = document.querySelector("#email").value;
+        var mobile = document.querySelector("#mobile").value;
+
+        var stuObj = {
+            studentName: name,
+            studentAge: age,
+            studentGender: gender,
+            studentEmail: email,
+            studentMobile: mobile,
+            };
+
+            students.push(stuObj);
+            console.log(stuObj);
+    }
+
+</script>

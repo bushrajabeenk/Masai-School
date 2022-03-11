@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        table, thead, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        #tableTag {
+            height: 150px;
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <table id="tableTag" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Science</th>
+                <th>Math</th>
+                <th>English</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+
+    var tbleObj = [
+        {name:"Prateek", science: "89", math: "96", english: "95"},
+        {name:"Nrupul", science: "100", math: "100", english: "100"},
+        {name:"Yogesh", science: "80", math: "80", english: "92"},
+        {name:"Nrupul", science: "85", math: "91", english: "88"},
+        {name:"Nrupul", science: "90", math: "100", english: "95"},
+    ];
+
+    tbleObj.map(function(elem, index, array)
+    {
+        var row = document.createElement("tr");
+        var col1 = document.createElement("td");
+        col1.innerText = elem.name;
+        var col2 = document.createElement("td");
+        col2.innerText = elem.science;
+        var col3 = document.createElement("td");
+        col3.innerText = elem.math;
+        var col4 = document.createElement("td");
+        col4.innerText = elem.english;
+
+        row.append(col1, col2, col3, col4);
+
+        document.querySelector("tbody").append(row);
+    });
+
+</script>

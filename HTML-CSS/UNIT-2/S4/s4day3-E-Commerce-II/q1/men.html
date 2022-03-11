@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      #container {
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content:space-between;
+        gap: 20px;
+        font-family: sans-serif;
+      }
+      .mainDiv {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 100%;
+        height: 340px;
+        padding-top: 30px;
+        margin: auto;
+        text-align: center;
+        font-size: 10px;
+      }
+      .innerDiv {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <button onClick="window.location.href='cart.html'" >Go To Cart</button>
+
+    <!-- <select id="sorter" onchange="sortItems()"> -->
+    <select id="sorter" onchange="filters()">
+      <option value="">Sort By</option>
+      <option value="h2l">High To Low</option>
+      <option value="l2h">Low To High</option>
+    </select>  
+
+    <!-- <input id="search" onkeyup="search()" > -->
+    <input id="search" onkeyup="filters()" >
+
+    <!-- <select id="filter" onchange="filterItems()"> -->
+    <select id="filter" onchange="filters()">
+      <option value="">Filter By</option>
+      <option value="5000">> 5000</option>
+      <option value="3000">> 3000</option>
+      <option value="1000">> 1000</option>
+    </select>
+
+    <h1 id="items" >0</h1>
+
+    <button onclick="clearAllFilters()" >Reset</button>
+
+    <div id="container"></div>
+
+  </body>
+</html>
+<script src="./Data/mensData.js"></script>
+<script src="./Script/men.js" ></script>
+
+<!-- cart page  i wnat all items which i click on add -->

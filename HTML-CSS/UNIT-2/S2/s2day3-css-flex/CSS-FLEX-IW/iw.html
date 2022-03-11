@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #outer {
+            width:80%;
+            height:90px;
+            background-color: #1C2938;
+            margin: auto;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #outer > div {
+            color: white;
+            font-size: 15px;
+            font-family:sans-serif;
+            width: 30%;
+            height: 100%;
+            padding: 35px;
+        }
+
+        #outer > div:first-child {
+            justify-content: flex-start;
+        }
+
+        #outer > div:last-child {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        select {
+            background-color: #1C2938;
+            color: white;
+            border: 0;
+            font-size: 15px;
+            font-family:sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <div><b>MEGAWIDTH</b></div>
+        <div>
+            <div>Home</div>
+            <div>About</div>
+            <div>Blog</div>
+            <div>
+                <select>
+                    <option>Page</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

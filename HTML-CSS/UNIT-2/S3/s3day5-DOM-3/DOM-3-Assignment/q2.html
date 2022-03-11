@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #container {
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-between;
+            gap: 10px;
+            margin: auto;
+            font-family: sans-serif;
+        }
+
+        #boxDiv {
+            width: 100%;
+            height: 120px;
+            margin: auto;
+            border: 1px solid rgb(241, 241, 241);
+        }
+
+        #image {
+            width: 100%;
+            margin-bottom: -10px;
+        }
+
+        #para {
+            text-align: center;
+            color: rgb(43, 43, 43);
+            font-size: 20px;
+        }
+
+        #sp1 {
+            padding-left: 18px;
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        #sp2 {
+            color: grey;
+            font-size: 25px;
+            padding-left: 30px;
+            text-decoration: line-through;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container" >
+
+    </div>
+
+</body>
+</html>
+<script>
+
+    var data = [
+        {
+            imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+            name:"LATEST MEN’S SNEAKER",
+            price:25.00,
+            strikedOffPrice:95.00
+        },{
+            imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+            name:"LATEST MEN’S SNEAKER",
+            price:35.00,
+            strikedOffPrice:100.00
+        },{
+            imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+            name:"LATEST MEN’S SNEAKER",
+            price:35.00,
+            strikedOffPrice:100.00
+        },
+        {
+            imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+            name:"LATEST MEN’S SNEAKER",
+            price:35.00,
+            strikedOffPrice:100.00
+        }
+    ];
+
+    
+    data.map(function(elem, index, array)
+    {
+        var boxDiv = document.createElement("div");
+        boxDiv.setAttribute("id", "boxDiv");
+        
+        var image = document.createElement("img");
+        image.setAttribute("src", elem.imgUrl);
+        image.setAttribute("id", "image");
+
+        var para = document.createElement("p");
+        para.innerText = elem.name;
+        para.setAttribute("id", "para");
+
+        var sp1 = document.createElement("span");
+        sp1.innerText = elem.price;
+        sp1.setAttribute("id", "sp1");
+
+        var sp2 = document.createElement("span");
+        sp2.innerText = elem.strikedOffPrice;
+        sp2.setAttribute("id", "sp2");
+
+        boxDiv.append(image, para, sp1, sp2);
+
+        document.querySelector("#container").append(boxDiv);
+    });
+        
+
+
+
+</script>

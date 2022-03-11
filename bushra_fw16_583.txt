@@ -1,0 +1,151 @@
+PROBLEM 1:
+
+var radius = {
+
+  circumference: function(r,pi)
+                {
+                  var c = 2 * pi * r;
+                  return c;
+                }
+                ,
+
+  area: function(r,pi)
+        {
+           var a = pi * r * r;
+           return a; 
+        }
+}
+
+var pi = 3.14;
+var r1 = radius.circumference(5, pi);
+console.log(r1);
+var r2 = radius.area(5, pi);
+console.log(r2);
+
+---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------
+
+PROBLEM 2:
+
+PART 1
+
+var employee = ["Sam", "John", "Mark", "Peter", "Simon"];
+var department = ["Sales", "Marketting", "Operation", "Finance", "Tech"];
+var salary  = [40000, 60000, 50000, 60000, 70000];
+
+var data = [];
+var obj = {};
+for(var i=0; i<employee.length; i++)
+{
+  obj["name"] = employee[i];
+  obj["salary"] = salary[i];
+  obj["department"] = department[i];
+  data.push(obj);
+}
+console.log(data);
+
+-------------------------------------------
+
+PART 2
+
+function getEmployeeNames(data)
+{
+  for(var i in data)
+  {
+    console.log(data[i].name);
+  }
+}
+ getEmployeeNames(data);
+
+-------------------------------------------
+
+PART 3
+
+function getMaxSalaryEmployee(data) 
+ {
+   var max = null;
+   var obj = {};
+   for(var i in data)
+   {
+     if(max == null || data[i].salary > max)
+     {
+       obj["name"] = data[i].name;
+       obj["salary"] = data[i].salary;
+       obj["department"] = data[i].department;
+     }
+   }
+   console.log(obj);
+ }
+ getMaxSalaryEmployee(data);
+
+-----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+PROBLEM 3
+
+function firstLetterCapital(arr)
+{
+    var r = [];
+    for(var i=0; i<arr.length; i++)
+    {
+      var a = arr[i];
+      var res = "";
+      for(var j=0; j<a.length; j++)
+      {
+        if(a[j] == toL(a[j]))
+        {
+          res = res + toU(a[j]);
+        }
+        res = res + a[j];
+      }
+      //console.log(res);
+      r.push(res);
+    }
+    
+    console.log(r);
+}
+
+var arr = ["masai","school"];
+firstLetterCapital(arr);
+
+function toL(a)
+{
+  var res = "";
+  var lower = "abcdefghijklmnopqrstuvwxyz";
+  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  
+  for(var i=0; i<a.length; i++)
+  {
+    for(var k=0; k<lower.length; k++)
+    {
+      if(a[i] == lower[k])
+      {
+        res = res + upper[k];
+      }
+      res = res + a[i];
+    }
+  }
+  return res;
+}
+
+function toU(a)
+{
+  var res = "";
+  var lower = "abcdefghijklmnopqrstuvwxyz";
+  var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  for(var i=0; i<a.length; i++)
+  {
+    for(var k=0; k<upper.length; k++)
+    {
+      if(a[i] == upper[k])
+      {
+        res = res + lower[k];
+      }
+      res = res + a[i];
+    }
+  }
+  return res;
+}
+
+
+

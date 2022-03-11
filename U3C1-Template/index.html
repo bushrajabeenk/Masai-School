@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+
+      #divv {
+        font-family: sans-serif;
+        text-align: center;
+      }
+
+      #product_form{
+        width: 25%;
+        height: 400px;
+        padding-top: 20px;
+        margin: auto;
+        background-color: teal;
+        color: white;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <div id="menu">
+      <!--Create Show Products button here, give id as "show_products". avoid making spelling mistakes in HTML id's-->
+      <button id="show_products" onclick="window.location.href='inventory.html'" >Show Products</button>
+    </div>
+
+    <div id="divv" >
+      <h2>ADD PRODUCTS</h2>
+
+      <br>
+      
+      <!--Create a form here to accept product data from user, give form HTML id as "product_form"-->
+
+      <!--Create four inputs to accept name, price, type and image-->
+      <!--give the inputs following respective id's, "name", "price","type","image"-->
+      <!--create a submit option to submit form, give it html id as "submit"-->
+      <form id="product_form" >
+        <div>
+          <p>Name</p>
+          <input id="name" type="text">
+        </div>
+        <div>
+          <p>Price</p>
+          <input id="price" type="text">
+        </div>   
+        <div>
+          <p>Brand</p>
+          <input id="brand" type="text">
+        </div>
+        <div>
+          <p>Type</p>
+          <input id="type" type="text">
+        </div>
+        <div>
+          <br>
+          <input id="submit" type="submit">
+        </div>
+      </form>
+
+    </div>
+
+  </body>
+</html>
+
+<script src="./scripts/index.js"></script>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #container 
+        {
+            width: 30%;
+            margin: auto;
+            text-align: center;
+        }
+
+        #container > div:first-child 
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #container > div:nth-child(1)
+        {
+            margin: auto;
+        }
+
+        #score 
+        {
+            height: 80px;
+            width: 300px;
+            color: black;
+            background-color:grey;
+            border: 3px solid black;
+        }
+
+        input 
+        {
+            height: 40px;
+            width: 90px;
+            text-align: center;
+        }
+
+        #btn 
+        {
+            width: 300px;
+            height: 380px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        #btn > button:nth-child(2n+1){
+            color: black;
+            background-color:rgb(51, 128, 0);
+        }
+
+        #btn > button:nth-child(2n){
+            color: black;
+            background-color: rgb(255, 94, 0);
+        }
+
+        #enter 
+        {
+            height: 50px;
+            width: 300px;
+            color: white;background-color:black;
+        }
+
+        #min-val {
+            color: black;
+            background-color:red;
+            border: 3px solid black;
+            height: 60px;
+        }
+
+        #max-val {
+            color: black;
+            background-color:green;
+            border: 3px solid black;
+            height: 60px;
+        }
+
+        #min-box, #max-box, #score-box,
+         #enter, #btn > button, #score, #max-val, #min-val {
+            font-size: 25px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <div id="container" >
+        <div>
+            <div>
+                <input id="min-val" value="42" >
+                <p id="min-box" >MIN</p>
+            </div>
+        
+            <div>
+                <input id="max-val" value="2019" >
+                <p id="max-box" >MAX</p>
+            </div>
+        </div>
+    
+        <div>
+            <p id="score-box" >SCORE</p>
+            <input value="#" id="score" >
+        </div>
+
+        <br>
+
+        <div id="btn" >
+            <button onclick="press('1');" >1</button>
+            <button onclick="press('2');" >2</button>
+            <button onclick="press('3');" >3</button>
+            <button onclick="press('4');" >4</button>
+            <button onclick="press('5');" >5</button>
+            <button onclick="press('6');" >6</button>
+            <button onclick="press('7');" >7</button>
+            <button onclick="press('8');" >8</button>
+            <button onclick="press('9');" >9</button>
+            <button onclick="press('0');" >0</button>
+        </div>
+        
+        <br>
+
+        <button id="enter" onclick="setScores()" >ENTER</button>
+    </div>
+    
+</body>
+</html>
+<script>
+    var bag = "";
+    var max = document.querySelector("#max-val").value;
+    var min = document.querySelector("#min-val").value;
+    function press(num)
+    {
+          bag = bag + num;
+          //console.log(bag); 
+          document.querySelector('#score').value = bag;
+    }
+
+    function setScores()
+    {
+        if(Number(bag) > max)
+        {
+           max = bag;
+           document.querySelector('#max-val').value = max;
+        }
+        else if(Number(bag) < min)
+        {
+            min = bag;
+            document.querySelector('#min-val').value = min;
+        }
+        bag = "";
+        document.querySelector('#score').value = "";
+    }
+</script>

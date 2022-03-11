@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- It should take the gender (dropdown) and year of birth 
+    as input and show an alert if the user is of the valid legal
+     age to get married or not -->
+
+    <select name="text" id="gender">
+        <option name="Male" >Male</option>
+        <option name="Female" >Female</option>
+        <option name="Other" >Other</option>
+    </select>
+    <input type="date" name="dob" id="dob" />
+    <button onclick="printValidity()" >Click</button>
+
+    <script>
+        function printValidity()
+        {
+            var gender = document.getElementById("gender").value;
+            var dob = document.getElementById("dob").value;
+
+            // if(gender == Male && dob < )
+            // {
+            //     alert("Valid age of marriage for Men");
+            // }
+
+        }
+    </script>
+</body>
+</html>

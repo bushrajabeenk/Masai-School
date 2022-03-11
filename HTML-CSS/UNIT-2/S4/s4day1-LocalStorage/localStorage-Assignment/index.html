@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #divTag{
+            display: flex;
+        }
+        #divTag > div:first-child {
+            padding-left: 90px;
+        }
+        #divTag > div:last-child {
+            padding-left: 300px;
+        }
+
+        table, th, td
+        {
+            border-top: 1px solid grey;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: auto;
+            margin-top: 50px;
+            text-align: left;
+        } 
+
+        th,
+        td {
+            padding: 20px;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        tr > th {
+            color: black;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="divTag" >
+
+        <div>
+            <h1>Add Product</h1>
+
+            <form id="form" >
+                <p for="category">Category</p>
+                <select name="category" id="category" style="width:345px; height:30px" 
+                    <option value="homeAppliances">Home Appliances</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="furniture">Furniture</option>
+                    <option value="books">Books</option>
+                </select>
+                <p for="title">Title</p>
+                <input name="title" id="title" type="text" style="width:337px; height:22px" >
+                <br>
+                <p for="description">Description</p>
+                <textarea name="description" id="description" cols="44" rows="5"></textarea>           
+                <p for="price">Price</p>
+                <input name="price" id="price" type="number" style="width:337px; height:22px" >  
+                <div>
+                    <br>
+                    <input type="submit" value="Add">
+                </div>
+            </form>
+        </div>
+        
+        <div>
+            <h1>Product Info</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>CATEGORY</th>
+                        <th>TITLE</th>
+                        <th>DESCRIPTION</th>
+                        <th>PRICE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script src="index.js" ></script>

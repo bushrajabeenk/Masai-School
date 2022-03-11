@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+
+    body {
+      font-family: sans-serif;
+    }
+
+    #menu {
+      margin-bottom: 50px;
+    }
+
+    #products_data 
+    {
+      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(1fr);
+      gap: 50px;
+    }
+
+    #products_data > div
+    {
+      background-color: rgb(63, 192, 192);
+      margin: auto;
+      width: 80%;
+      height: 200px;
+      text-align: center;  
+    }
+    
+    #boxDiv > p:first-child {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    #pricebrand {
+      font-size: 15px;
+      font-weight: 200;
+      display: flex;
+      align-items: center;
+      justify-content:space-between;
+    }
+
+    #pricebrand > p {
+      margin-right: 50px;
+      margin: auto;  
+    }
+
+    #btn {
+      background-color:rgb(255, 255, 255);
+      color: black;
+    }
+
+
+  </style>
+
+  <body>
+
+    <div id="menu">
+      <!--Create Add Product button here, give id as "add_product". 
+        avoid making spelling mistakes in HTML id's-->
+      <button id="add_product" >Add Product</button>
+    </div>
+
+    <div id="products_data">
+      <!--append all products data here in grid format-->
+    </div>
+
+  </body>
+</html>
+
+<script src="./scripts/inventory.js"></script>

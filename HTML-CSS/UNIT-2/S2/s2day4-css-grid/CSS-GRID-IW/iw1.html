@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 95%;
+            height: 400px;
+            margin: auto;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 400px;
+            gap: 5px;
+            background-color: rgb(240, 231, 231);
+        }
+
+        .child {
+            border-radius: 7px;
+            width: 440px;
+            height: 380px;
+            margin: auto;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .child > p {
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: 600;
+            margin-left: 10px;
+            margin-right: 10px;
+            line-height: 25px;
+        }
+
+        .child > span {
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .first {
+            margin-left: 10px;
+        }
+
+        img {
+            height: 250px;
+            width: 440px;
+            margin-bottom: -10px;
+            border-radius: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="outer">
+            <div class="child">
+                <img src="https://via.placeholder.com/430x250" />
+                <p>This Is What's Going To Happen In 2021 - Nostradamus Predicted It Centuries Ago</p>
+                <span class="first">Crafsthought</span>
+                <span>Sponsored</span>
+            </div>
+            <div class="child">
+                <img src="https://via.placeholder.com/430x250" />
+                <p>Prices Of Unsold New Cars In Vishakhapatnam Could Greatly Surprise You</p>
+                <span class="first">Unsold Cars</span>
+                <span>Search Ads</span>
+                <span>Sponsored</span>
+            </div>
+            <div class="child">
+                <img src="https://via.placeholder.com/430x250" />
+                <p>Apartments For Sale Prices In Vishakhapatnam Might Surprise You</p>
+                <span class="first">Apartments For Sale</span>
+                <span>Search Ads</span>
+                <span>Sponsored</span>
+            </div>
+        
+    </div>
+</body>
+</html>

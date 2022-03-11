@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="container" value="">
+        <option value="disabled selected hidden">country</option>
+        <option  value="India">India</option>
+        <option  value="unitedStatesOfAmerica">United States of America</option>
+        <option  value="China">China</option>
+        <option  value="Nepal">Nepal</option>
+        <option  value="Australia">Australia</option>
+        <option  value="France">France</option>
+        <option  value="Germany">Germany</option>
+        <option  value="SouthAfrica">South Africa</option>
+        <option  value="Nigeria">Nigeria</option>
+        <option  value="Mexico">Mexico</option>
+        <option  value="Argentina">Argentina</option>
+        <option  value="Brazil">Brazil</option>
+        <option  value="Canada">Canada</option>
+        <option  value="Singapore">Singapore</option>
+        <option  value="Sweden">Sweden</option>
+    </select>
+    <button id="disp">Find continent</button>
+</body>
+</html>
+
+<script>
+    var arr=["India","unitedStatesOfAmerica","China","Nepal","Australia","France","Germany",
+    "Germany","SouthAfrica","Nigeria","Mexico","Argentina","Brazil","Canada","Singapore","Sweden"]
+    
+    var arr1=["Asia","North-America","Asia","Asia","Australia","Europe","Europe","Europe","Africa"," America",
+    "South America","America","South America","South America","North America","Asia","Europe"]
+
+    document.getElementById("disp").addEventListener("click",display);
+    function display(event)
+    {
+        var res = document.getElementById("container").value;
+        // var res = document.querySelectorAll("#container").value;
+        
+        for(var i=0; i<arr.length; i++)
+        {
+            if(res == arr[i])
+            {
+                // var d=arr1[i];
+                alert("The continent is "+arr1[i]);
+            }
+        }
+    }
+
+</script>
+
+
+
+

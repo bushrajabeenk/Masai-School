@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var btnObj = [
+        {text:"Primary", bgColor:"blue", color:"white"},
+        {text:"Secondary", bgColor:"grey", color:"white"},
+        {text:"Success", bgColor:"green", color:"white"},
+        {text:"Danger", bgColor:"red", color:"white"},
+        {text:"Warning", bgColor:"yellow", color:"black"},
+        {text:"Info", bgColor:"cyan", color:"white"},
+        {text:"Light", bgColor:"whitesmoke", color:"black"},
+        {text:"Dark", bgColor:"black", color:"white"},
+        {text:"Link", bgColor:"white", color:"blue"}
+    ];
+
+    btnObj.map(function(elem, index, array)
+    {
+        var btn = document.createElement("button");
+        btn.innerText = elem.text;
+        btn.style.backgroundColor = elem.bgColor;
+        btn.style.color = elem.color;
+        btn.style.border = "none";
+        btn.style.borderRadius = "5px";
+        btn.style.padding = "10px 13px 10px 13px";
+        btn.style.marginRight = "5px";
+
+        document.querySelector("body").append(btn);
+    });
+
+</script>

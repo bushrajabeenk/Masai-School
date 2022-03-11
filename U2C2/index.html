@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous">
+    <title>Unit-2 C2</title>
+    <style>
+      
+      #courses {
+        width: 50%;
+        height: 250px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 120px);
+        row-gap: 6px;
+        column-gap: -15px;
+        font-family: sans-serif;
+      }
+
+      .boxes {
+        width: 80%;
+        height: 70%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .boxes > div:first-child{
+        font-size: 55px;
+        color: green;
+      }
+
+      .boxes > div:last-child{
+        margin-top: -10px;
+        margin-left: 15px;
+      }
+
+      .boxes > div:last-child > p:first-child{
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .boxes > div:last-child > p:last-child{
+        font-size: 8px;
+        line-height: 15px;
+        color: grey;
+        margin-top: -5px;
+      }
+
+      #bottom{
+        width: 80%;
+        height: 320px;
+        margin: auto;
+        background-color: rgb(245, 245, 245);
+        margin-top: 50px;
+        padding-top: 50px;
+        font-family: sans-serif;
+        text-align: center;
+      }
+
+      #bottom > h1 {
+        margin: auto;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      #bottom > p {
+        margin: auto;
+        font-size: 8px;
+        color: grey;
+        margin-bottom: 30px;
+      }
+
+      #teachers {
+        width: 205px;
+        height: 220px;
+        margin: auto;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 18px;
+      }
+
+      /* #teachers > div {
+       
+      } */
+
+      #teachers > div > h5 {
+        margin-top: 1px;
+        font-size: 12px;
+      }
+
+      #teachers > div > h6 {
+        margin-top: -17px;
+        font-size: 5px;
+        color: rgb(255, 60, 0);
+      }
+
+      #teachers > div > p{
+        font-size: 8px;
+        color: grey;
+        line-height: 12px;
+        margin-top: -5px;
+      }
+
+      img {
+        height: 150px;
+        width: 205px;
+      }
+
+
+      /* keep media queries at that last */
+      /* medium screens */
+      @media only screen and (min-width: 421px) and (max-width: 720px) 
+      {
+        #courses {
+          height: 500px;
+          width: 80%;
+          margin: auto;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 120px;
+          gap: 10px;
+        }
+
+        .boxes {
+          width: 80%;
+          height: 50%;
+          margin: auto;
+        }
+
+        #bottom{
+          width: 90%;
+          height: 450px;
+          margin-top: 5px;
+          padding-top: 50px;
+        }
+
+        #teachers {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 50px);
+          row-gap: 130px;
+          column-gap: 50px;
+        }
+
+        img {
+          height: 110px;
+          width: 180px;
+        }
+      }
+
+      /* small screens */
+      @media only screen and (min-width: 0px) and (max-width: 420px) 
+      {
+        #courses {
+          height: 700px;
+          margin: auto;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: 120px;
+          gap: 10px;
+        }
+
+        .boxes {
+          width: 80%;
+          height: 50%;
+          margin: auto;
+        }
+
+        #bottom{
+          width: 90%;
+          height: 700px;
+          margin-top: 50px;
+          padding-top: 50px;
+        }
+
+        #teachers {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(4, 50px);
+          row-gap: 100px;
+          column-gap: 100px;
+        }
+
+        img {
+          height: 80px;
+          width: 180px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="courses">
+
+      <div class="boxes">
+        <div>
+          <i class="fas fa-registered"></i>
+        </div>
+        <div>
+          <p>Business School</p>
+          <p>This is a unit coding evaluation. It is based on html and css.</p>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <div>
+          <i class="fas fa-registered"></i>
+        </div>
+        <div>
+          <p>Marketing</p>
+          <p>This is a unit coding evaluation. It is based on html and css.</p>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <div>
+          <i class="fas fa-registered"></i>
+        </div>
+        <div>
+          <p>Photography</p>
+          <p>This is a unit coding evaluation. It is based on html and css.</p>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <div>
+          <i class="fas fa-registered"></i>
+        </div>
+        <div>
+          <p>Social Media</p>
+          <p>This is a unit coding evaluation. It is based on html and css.</p>
+        </div>
+      </div>
+
+      <div class="boxes">
+        <div>
+          <i class="fas fa-registered"></i>
+        </div>
+        <div>
+          <p>Development</p>
+          <p>This is a unit coding evaluation. It is based on html and css.</p>
+        </div>        
+      </div>
+
+      <div class="boxes">
+        <div>
+          <i class="fas fa-registered"></i>
+        </div>
+        <div>
+          <p>Design</p>
+          <p>This is a unit coding evaluation. It is based on html and css.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="bottom" >
+      <h1>Certified Teachers</h1>
+      <p id="description">
+        Separated they live in. A small river named Duden flows by their place and
+        supplies it with the necessary regelialia. It is a paradisematic country
+      </p>
+      
+      <div id="teachers">
+        <div>
+          <img src="https://via.placeholder.com/205x150" />
+          <h5>Marie Curie</h5>
+          <h6>TEACHER</h6>
+          <p>I am pretty ambitious person, but apart from that, i am a pretty 
+            simple person.</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/205x150" />
+          <h5>Isaac Newton</h5>
+          <h6>ENGLISH TEACHER</h6>
+          <p>I am pretty ambitious person, but apart from that, i am a pretty 
+            simple person.</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/205x150" />
+          <h5>Thomas Edison</h5>
+          <h6>ART TEACHER</h6>
+          <p>I am pretty ambitious person, but apart from that, i am a pretty 
+            simple person.</p>
+        </div>
+        <div>
+          <img src="https://via.placeholder.com/205x150" />
+          <h5>Mahatma Gandhi</h5>
+          <h6>SCIENCE TEACHER</h6>
+          <p>I am pretty ambitious person, but apart from that, i am a pretty 
+            simple person.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

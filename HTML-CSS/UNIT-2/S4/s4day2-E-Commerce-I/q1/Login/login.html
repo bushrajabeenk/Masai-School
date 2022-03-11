@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Login</h1>
+
+    <form id="form">
+      <input id="user" type="text" placeholder="Enter username" />
+      <input id="pass" type="password" placeholder="Enter password" />
+      <input type="submit" value="Login" />
+    </form>
+
+  </body>
+</html>
+
+<!-- <script src="./Script/login.js" ></script> -->
+
+<script>
+
+  var regdUsers = JSON.parse(localStorage.getItem("signUpDetails"));
+  //console.log(regdUsers);
+  document.querySelector("#form").addEventListener("submit", formSubmit);
+
+  // var form = document.querySelector("#form");
+  // console.log(form.user.value);
+  // form.id.value
+  // catching form values using above method
+  function formSubmit(event) 
+  {
+    event.preventDefault();
+    
+      // user: form.user.value,
+      var user = document.querySelector("#user").value;
+      var pass = document.querySelector("#pass").value;
+
+    
+    // compare user pass from localStorage with above user and pass.
+    var flag = false;
+    for (var i = 0; i < regdUsers.length; i++) 
+    {
+      if (regdUsers[i].user == user && regdUsers[i].pass == pass) 
+      {
+        flag=true;
+      } 
+    }
+    if(flag == true)
+      {
+        console.log("Login Success");
+        alert("Login Success");
+      }
+      else
+      {
+        console.log("Login Failed");
+        alert("Login Failed");
+      }
+      
+  }
+
+
+  // whenever you want to store multiple objects
+
+</script> 
+  

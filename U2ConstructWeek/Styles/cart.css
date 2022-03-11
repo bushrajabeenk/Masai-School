@@ -1,0 +1,42 @@
+
+        /* #totItems {
+
+        } */
+
+        #container {
+            width: 60%;
+            margin-left: 80px;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-family: Open Sans,sans-serif;
+        }
+
+        #mainDiv {
+            display: flex;
+        }
+      
+        #imgDiv {
+            height: 40px;
+            width: 50px;
+        }
+
+        #innerDiv {
+            text-align: left;
+        }
+
+        #itemName {
+            font-size: 20px;
+        }
+
+        #itemStrikedPrice {
+            text-decoration: line-through;
+            font-size: 18px;
+        }
+        
+        #itemPrice {
+            font-size: 20px;
+        }
+/* 
+        #btn {
+
+        } */

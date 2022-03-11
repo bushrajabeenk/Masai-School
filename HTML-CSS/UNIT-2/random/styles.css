@@ -1,0 +1,32 @@
+#report {
+    border-collapse: collapse;
+    width: 70%;
+    margin:auto;
+}
+
+#report th, #report td {
+    padding: 8px;
+    border: 1px solid white;
+}
+
+#report tr:nth-child(even)
+{
+    background-color: rgb(184, 183, 183);
+}
+
+#report tr:nth-child(odd)
+{
+    background-color: #ddd;
+}
+
+#report th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align:left;
+    color:white;
+    background-color:rgb(32, 134, 66);
+}
+
+form {
+    margin-bottom:100px;
+}

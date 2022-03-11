@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+
+body {
+    font-family: "Montserrat", sans-serif;
+    max-width: 50%;
+    margin: auto;
+    color: #333;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.face {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* adjusting the image which got stretched due to changed width and height to fit inside the given width and height properly */
+    border-radius: 50%; /*make the border 50% of its width and height, no matter if its height and width changes in future */
+    margin-top: 20px;
+}
+
+.title {
+    flex: 1; /*alotting 1 portion to title div out of the whole box/ area available, and leaving the remaining area for the next available parts*/
+    margin-left: 20px;
+}
+
+.name {
+    color: grey;
+}
+
+.coral {
+    color: coral;
+}
+
+.hrline {
+    border: 1px solid coral;
+}
+
+.table-heading {
+    min-width: 300px;
+    display: block;
+}
+
+.table-props {
+    font-size: 22px;
+    color: coral;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.marginfix {
+    margin-top: 50px;
+}
+
+.Sheading {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.duration {
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.description {
+    margin-top: 5px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      .container {
+        width: 80%;
+        height: 600px;
+        padding-top: 40px;
+        margin: auto;
+        display: flex;
+        /* flex-direction: column;
+        flex-wrap: wrap; */
+        flex-flow: row wrap;
+        justify-content: center;
+        font-family: sans-serif;
+        align-items: center;
+      }
+
+      .container > div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 30%;
+        height: 24%;
+        margin-right: 40px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+      }
+
+      .container > div:nth-child(4){
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 30%;
+        height: 24%;
+        margin-right: 40px;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        order: 3;
+      }
+
+
+      .innerbox {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .container > div > p {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: grey;
+        line-height: 23px;
+      }
+
+      .innerbox {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .innerbox > p:last-child {
+        color: rgb(184, 184, 49);
+      }
+
+    </style>
+  </head>
+
+  <body>
+ <!-- dont change any tags and id name -->
+ <!-- use borders to check for boxes -->
+<!-- main container -->
+    <div class="container">
+
+      <div>
+        <!--class="innerbox" is the box where we have coffee name and price -->
+        <div class="innerbox">
+          <p>Cappucino</p>
+          <p>$49</p>
+        </div> 
+        <!--para with text - usage of internet  -->
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Americano</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Espresso</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Macchiato</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Mocha</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Coffee Latte</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Picolo Latte</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Ristretto</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+      <div>
+        <div class="innerbox">
+          <p>Affogato</p>
+          <p>$49</p>
+        </div>
+        <p>Usage of the internet is becoming more common due to rapid advance</p>
+      </div>
+
+    </div>
+  </body>
+</html>

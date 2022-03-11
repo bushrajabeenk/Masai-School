@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #container {
+            width: 85%;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: space-between;
+            gap: 10px;
+            margin: auto;
+            font-family: sans-serif;
+        }
+
+        #boxDiv {
+            width: 100%;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            text-align: center;
+        }
+
+        #avatar {
+            border-radius: 8px 8px 0px 0px;
+            height: 270px;
+            width: 100%;
+            margin-bottom: -13px;
+        }
+
+        #head2 {
+            margin-bottom: -12px;
+            font-weight: 600;
+        }
+
+        #para {
+            margin-bottom: 2px;
+            color: grey;
+            font-size: 15px;
+        }
+        
+        #logo {
+            height: 45px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="container" >
+        
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    var data = [
+        {
+            imgSrc:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg", 
+            name:"Vijay Shekhar Sharma", 
+            role:"Founder & CEO", 
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"
+        },
+        {
+            imgSrc:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png", 
+            name:"Kunal Shah", 
+            role:"Founder", 
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"
+        },
+        {
+            imgSrc:"https://masai-website-images.s3.ap-south-1.amazonaws.com/amrish_rau_pine_labs_144e5e587c.jpg", 
+            name:"Amrish Rau", 
+            role:"CEO", 
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/pine_labs_0aa2407434.png"
+        },
+        {
+            imgSrc:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Sampad_swain_Instamojo_f12bf6341e.jpg", 
+            name:"Sampad Swain", 
+            role:"Co-Founder & CEO", 
+            companyLogo:"https://masai-website-images.s3.ap-south-1.amazonaws.com/instamojo_8763e704f7.png"
+        },
+    ];
+
+
+    data.map(function(elem, index, array)
+    {
+        var box = document.createElement("div");
+        box.setAttribute("id", "boxDiv");
+
+        var avatar = document.createElement("img");
+        avatar.setAttribute("src", elem.imgSrc);
+        avatar.setAttribute("id", "avatar");
+
+        var head2 = document.createElement("h2");
+        head2.innerText = elem.name;
+        head2.setAttribute("id", "head2");
+
+        var para = document.createElement("p");
+        para.innerText = elem.role;
+        para.setAttribute("id", "para");
+
+        var logo = document.createElement("img");
+        logo.setAttribute("src", elem.companyLogo);
+        logo.setAttribute("id", "logo");
+
+        box.append(avatar, head2, para, logo);
+
+        document.querySelector("#container").append(box);
+    });
+
+</script>
