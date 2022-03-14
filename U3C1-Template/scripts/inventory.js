@@ -1,15 +1,16 @@
     
-    document.querySelector("#add_product").addEventListener("click", addData);
+    var nikeArray = JSON.parse(localStorage.getItem("products")) || [];
+    
+    document.querySelector("#menu>#add_product").addEventListener("click", addData);
 
-
-    function addData() 
+    function addData(e) 
     {
-        var nikeArray = JSON.parse(localStorage.getItem("products")) || [];
+        e.preventDefault();
 
         dispData(nikeArray);
         function dispData(nikeArray)
-        {
-            document.querySelector("#products_data").innerHTML = "";
+        {       
+            document.querySelector("#products_data").innerHTML = null;
 
             nikeArray.map(function(item, index){
 
@@ -19,16 +20,17 @@
                 var p1 = document.createElement("p");
                 p1.innerText = item.name;
 
-                var pricebrand = document.createElement("div");
-                pricebrand.setAttribute("id", "pricebrand");
+                var priceimage = document.createElement("div");
+                priceimage.setAttribute("id", "priceimage");
 
                     var p2 = document.createElement("p");
                     p2.innerText = item.price;
 
-                    var p3 = document.createElement("p");
-                    p3.innerText = item.brand;
+                    var image = document.createElement("img");
+                    image.src = item.image;
+                    image.id = "imgp";
 
-                pricebrand.append(p2, p3);
+                priceimage.append(p2, image);
 
                 var p4 = document.createElement("p");
                 p4.innerText = item.type;
@@ -40,19 +42,21 @@
                     removeItem(item, index);
                 });
 
-                boxDiv.append(p1, pricebrand, p4, p5);
+                boxDiv.append(p1, p2, image, p4, p5);
 
                 document.querySelector("#products_data").append(boxDiv);
             })
         }
 
         function removeItem(item, index){
+            console.log(item);
             nikeArray.splice(index, 1);
+            console.log(nikeArray)
             localStorage.setItem("products", JSON.stringify(nikeArray));
             dispData(nikeArray);
         }
+        
     }
 
-   
-
+    
     

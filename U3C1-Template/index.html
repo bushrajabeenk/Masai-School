@@ -8,18 +8,16 @@
 
     <style>
 
-      #divv {
-        font-family: sans-serif;
-        text-align: center;
-      }
 
       #product_form{
+        font-family: sans-serif;
         width: 25%;
         height: 400px;
         padding-top: 20px;
         margin: auto;
         background-color: teal;
         color: white;
+        text-align: center;
       }
 
     </style>
@@ -32,11 +30,6 @@
       <button id="show_products" onclick="window.location.href='inventory.html'" >Show Products</button>
     </div>
 
-    <div id="divv" >
-      <h2>ADD PRODUCTS</h2>
-
-      <br>
-      
       <!--Create a form here to accept product data from user, give form HTML id as "product_form"-->
 
       <!--Create four inputs to accept name, price, type and image-->
@@ -52,8 +45,8 @@
           <input id="price" type="text">
         </div>   
         <div>
-          <p>Brand</p>
-          <input id="brand" type="text">
+          <p>Image</p>
+          <input id="image" type="text">
         </div>
         <div>
           <p>Type</p>
@@ -64,8 +57,6 @@
           <input id="submit" type="submit">
         </div>
       </form>
-
-    </div>
 
   </body>
 </html>

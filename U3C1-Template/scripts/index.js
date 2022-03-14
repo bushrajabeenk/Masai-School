@@ -2,26 +2,26 @@
 
 document.querySelector("#product_form").addEventListener("submit", displayData);
 
+var nikeArray = JSON.parse(localStorage.getItem("products")) || [];
+
   function displayData(event) 
   {
     event.preventDefault();
 
-    var nikeArray = JSON.parse(localStorage.getItem("products")) || [];
+    var prodName = document.querySelector("#name").value;
+    var prodPrice = document.querySelector("#price").value;
+    var prodImg = document.querySelector("#image").value;
+    var prodType = document.querySelector("#type").value;
 
-    var name = document.querySelector("#name").value;
-    var price = document.querySelector("#price").value;
-    var brand = document.querySelector("#brand").value;
-    var type = document.querySelector("#type").value;
-
-    function nikeProducts(n, p, b, t)
+    function nikeProducts(n, p, i, t)
     {
       this.name = n;
       this.price = p;
-      this.brand = b;
+      this.image = i;
       this.type = t;
     }
 
-    var nikeObj = new nikeProducts(name, price, brand, type);
+    var nikeObj = new nikeProducts(prodName, prodPrice, prodImg, prodType);
     console.log(nikeObj);
 
     nikeArray.push(nikeObj);
